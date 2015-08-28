@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".HueActivity">
+
+    <TextView android:id="@+id/hellotext" android:text="Mediarite/IOController not connected" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hue not connected"
+        android:id="@+id/hueTextView"
+        android:layout_below="@+id/hellotext"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp"
+        android:id="@+id/progressBar"
+        android:indeterminate="false"
+        android:layout_below="@+id/hueTextView"
+        android:layout_centerHorizontal="true" />
+
+    <org.florescu.android.rangeseekbar.RangeSeekBar
+        android:id="@+id/rangeSeekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        rsb:absoluteMinValue="0"
+        rsb:absoluteMaxValue="3300" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rangeSeekBar"
+        android:text="Forget Hue Bridge"
+        android:id="@+id/hueButton"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:id="@+id/lampSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lamp 1"
+        android:layout_below="@+id/hueButton"
+        android:layout_marginTop="41dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+
