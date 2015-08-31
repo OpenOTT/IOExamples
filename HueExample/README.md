@@ -1,6 +1,6 @@
 The project demonstrates OpenOTT I/O controlling Philips Hue Zigbee LightLink lamps via a Philips Hue IP bridge. It assumes that the Hue bridge has at least two lamps connected and that there is one (and only one) Hue IP bridge on the same network as the OpenOTT board.
 
-!(Demo Setup overview)[HueDemo.png]
+![Demo Setup overview](HueDemo.png)
 
 You must have the 3.3v voltage over a photoresistor connected to the ADC on pin 40. For safety, the photoresistor should be in serial with a resistor, e.g. 10k ohm, to ensure that even if the photoresistor shorts, you do not short 3.3v to ground. The ADC input controls the intensity of the first Hue lamp. You can adjust the sensitivity of the ADC input via a UI slider, to compensate for the serial resistor's value and max/min lighting conditions.
 
